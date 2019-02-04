@@ -1,0 +1,82 @@
+@import "../../../../assets/variables";
+
+.form-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  background: #fff;
+  padding: 60px 30px;
+  margin: 0;
+  max-width: 400px;
+  border-radius: 4px;
+
+  .input-wrapper {
+    margin-top: 15px;
+  }
+
+  label {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  input.ng-touched.ng-dirty.ng-invalid {
+    border: solid 2px $dangerColor;
+  }
+
+  input.ng-touched.ng-valid {
+    border: solid $allowColor 2px;
+  }
+
+  .error-txt {
+    margin: 0;
+    font-size: 12px;
+    color: $dangerColor;
+    display: none;
+  }
+
+  input.ng-touched.ng-dirty.ng-invalid ~ .error-txt {
+    display: block;
+  }
+
+  .login-btn {
+    display: block;
+    margin: 10px auto 10px auto;
+    padding: 6px 24px;
+  }
+
+  .small-txt {
+    color: blue;
+    cursor: pointer;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+  }
+
+  .small-txt:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .bottom-block-wrapper {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 15px;
+    border-top: 1px solid $accentColor;
+
+    .small-txt-2 {
+      color: $dangerColor;
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+  }
+
+}
+
+

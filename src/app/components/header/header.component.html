@@ -1,0 +1,21 @@
+<header>
+  <div ngbDropdown>
+    <i class="fa fa-bars header-btn nav-btn" id="dropdownBasic1" ngbDropdownToggle></i>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button class="dropdown-item" *ngFor="let link of linksForNav" [routerLink]="[link.path]"
+              routerLinkActive="active">{{link.title}}</button>
+    </div>
+  </div>
+  <h1 [routerLink]="[homePath]"
+      routerLinkActive="active">Calendar</h1>
+  <nav>
+    <ul>
+      <li *ngFor="let link of linksForNav" [routerLink]="[link.path]"
+          routerLinkActive="active">{{link.title}}
+      </li>
+    </ul>
+  </nav>
+  <div class="logout-wrapper">
+    <i class="fa fa-sign-out header-btn logout-btn" (click)="logout()"></i>
+  </div>
+</header>

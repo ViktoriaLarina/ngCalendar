@@ -1,0 +1,39 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Event for {{currentDay | date :fullDate }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div [formGroup]="eventDataForm">
+        <p *ngIf="timeIntervalError" class="small form-text text-error">Invalid interval</p>
+        <div class="wrapper-timepicker">
+          <div class="start-date">
+            <ngb-timepicker formControlName="startTime" name="eventData.startTime" (ngModelChange)="fireOnChange($event)"></ngb-timepicker>
+          </div>
+          <div class="end-date">
+            <ngb-timepicker formControlName="endTime" name="eventData.endTime" class="end-date" (ngModelChange)="fireOnChange($event)"></ngb-timepicker>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="eventTitle">Title of event</label>
+          <input type="text" class="form-control" id="eventTitle" name="eventTitle" placeholder="title"
+                 formControlName="title">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="eventType">Select the type</label>
+        <select class="form-control" id="eventType" name="eventType" [(ngModel)]="eventType">
+          <option *ngFor="let type of eventTypes" [ngValue]="type.value" [selected]="type[0]">
+            {{type.title}}
+          </option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="checkForm()">Save</button>
+  </div>
+</ng-template>

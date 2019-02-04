@@ -1,0 +1,46 @@
+@import "../../../../assets/variables";
+
+.top-row {
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  margin: 0;
+  line-height: normal;
+  font-size: 24px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+
+.mini-calendar {
+  background: #7fa5bf;
+  height: 200px;
+  width: 100%;
+}
+
+.text-center {
+  margin: 0;
+  background: $accentColor;
+  color: #fff;
+}
+
+.tab-label {
+  cursor: pointer;
+  display: block;
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: solid 2px #fff;
+  border-bottom-color: $accentColor;
+  transition: background-color .3s ease;
+}
+
+.tab-label:hover, .tab-label:active {
+  border-bottom-color: rgb(255, 255, 255);
+}

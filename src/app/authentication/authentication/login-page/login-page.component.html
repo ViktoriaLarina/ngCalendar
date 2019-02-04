@@ -1,0 +1,27 @@
+<div class="form-wrapper">
+  <form [formGroup]="loginForm" class="form-group col-md-6">
+    <div>
+      <label for="login">Login:</label>
+      <input formControlName="login" id="login" class="form-control" placeholder="Enter your first name"/>
+      <p class="error-txt">{{ loginForm.value.login ? 'Only english or russian letters. length 2-25 characters' : 'Field is
+        required!'}}</p>
+    </div>
+
+    <div class="input-wrapper">
+      <label for="login">Password:</label>
+      <input formControlName="password" type="password" id="password" class="form-control" placeholder="Enter your password"/>
+      <p class="error-txt">Field is required!</p>
+    </div>
+    <div>
+      <a class="small-txt">Forgot your password?</a>
+    </div>
+    <button type="button" (click)="checkForm()" class="btn btn-info login-btn">Login</button>
+
+    <div class="bottom-block-wrapper">
+      <span>Don't have an account? </span>
+      <span class="small-txt-2">Register Now!</span>
+    </div>
+
+  </form>
+</div>
+
