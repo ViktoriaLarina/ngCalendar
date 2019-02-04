@@ -1,10 +1,6 @@
 # CalendarApp
 
-This project was created using
-  -Angular 7
-  -SCSS
-  -HTML5
-  -Bootstrap
+This project was created using Angular 7, SCSS, HTML5, Bootstrap
 
 ## Development server
 
@@ -16,7 +12,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build --prod` to build the project.
 
 ## Description
 
